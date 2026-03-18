@@ -34,7 +34,6 @@ Genie is a modern, Databricks Genie-inspired business intelligence platform that
 │ (SQL + Viz) │
 └──────────────────┘
 
-text
 
 ---
 
@@ -60,7 +59,6 @@ pip install -r requirements.txt
 Configure environment
 cp .env.example .env
 
-text
 
 Edit `.env` with your credentials:
 - DATABASE_URL=postgresql://user:pass@localhost:5432/dbname
@@ -69,7 +67,6 @@ Edit `.env` with your credentials:
 Start the API server:
 uvicorn main:app --reload --port 8000
 
-text
 
 API: http://localhost:8000
 Swagger Docs: http://localhost:8000/docs
@@ -86,7 +83,6 @@ cp .env.example .env
 Start development server
 npm run dev
 
-text
 
 Frontend: http://localhost:5173
 Vite auto-proxies /api/* to backend (no CORS issues)
@@ -114,8 +110,6 @@ SQL injection prevention via parameterized queries
 
 API keys never exposed to frontend
 
-text
-
 ---
 
 ## 📁 Project Structure
@@ -138,8 +132,6 @@ interactive-data-assistant/
 │ └── main.jsx # React entry point
 ├── package.json
 └── vite.config.js # Proxy configuration
-
-text
 
 ---
 
@@ -166,8 +158,6 @@ cd frontend && npm run build
 Serve with production ASGI server
 cd backend && pip install gunicorn
 gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
-
-text
 
 Recommended: Use nginx/Caddy as reverse proxy serving frontend/dist as static files with API routes proxied to port 8000.
 
