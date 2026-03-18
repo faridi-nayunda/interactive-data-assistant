@@ -23,16 +23,18 @@ Genie is a modern, Databricks Genie-inspired business intelligence platform that
 ---
 
 ## 🏗️ Architecture
-┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
-│ React Client │────▶│ FastAPI Backend │────▶│ PostgreSQL │
-│ (Vite + UI) │◄────│ (Python) │◄────│ (Read-Only) │
-└─────────────────┘ └──────────────────┘ └─────────────────┘
-│ │
-│ ┌────────▼─────────┐
-│ │ Anthropic │
-└─────────────▶│ Claude AI │
-│ (SQL + Viz) │
-└──────────────────┘
+graph TD
+    Client["React Client<br/>(Vite + UI)"] --> Backend["FastAPI Backend<br/>(Python)"]
+    Backend --> Database["PostgreSQL<br/>(Read-Only)"]
+    Backend --> AI["Anthropic Claude AI<br/>(SQL + Viz)"]
+    
+    Database -.-> Backend
+    AI -.-> Client
+    
+    style Client fill:#61DAFB,stroke:#333,stroke-width:2px
+    style Backend fill:#009688,stroke:#333,stroke-width:2px,color:#fff
+    style Database fill:#316192,stroke:#333,stroke-width:2px,color:#fff
+    style AI fill:#FF6B6B,stroke:#333,stroke-width:2px,color:#fff
 
 ---
 
