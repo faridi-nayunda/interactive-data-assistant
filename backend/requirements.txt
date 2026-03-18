@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+groq
+pandas
+python-dotenv
+loguru
+httpx
+redis
+alembic
+
+
+
+# python -m uvicorn backend.main:app --reload
