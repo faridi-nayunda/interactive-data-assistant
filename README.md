@@ -111,28 +111,6 @@ API keys never exposed to frontend
 
 ---
 
-## 📁 Project Structure
-interactive-data-assistant/
-├── backend/
-│   ├── main.py               # FastAPI app + query pipeline
-│   ├── requirements.txt       # Python dependencies
-│   ├── .env.example           # Configuration template
-│   └── .gitignore
-└── frontend/
-    ├── src/
-    │   ├── App.jsx            # Main chat interface
-    │   ├── api.js             # Axios API client
-    │   ├── components/
-    │   │   ├── ChartView.jsx  # Recharts visualizations
-    │   │   ├── DataTable.jsx  # Tabular results
-    │   │   ├── Message.jsx    # Chat message bubbles
-    │   │   └── SqlBlock.jsx   # Collapsible SQL panel
-    │   ├── index.css          # Tailwind styling
-    │   └── main.jsx           # React entry point
-    ├── package.json
-    └── vite.config.js         # Proxy configuration
----
-
 ## 🛠️ Tech Stack
 
 **Backend**
